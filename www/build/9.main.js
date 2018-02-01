@@ -1,12 +1,5 @@
 webpackJsonp([9],{
 
-/***/ 200:
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/binhu/Desktop/bryngs/bryngs_app/src/providers/courier-service.ts'");
-
-/***/ }),
-
 /***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -55,7 +48,6 @@ CarrierTripOngoingModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_courier_service__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_courier_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__providers_courier_service__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CarrierTripOngoing; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -159,9 +151,9 @@ CarrierTripOngoing = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-carrier-trip-ongoing',template:/*ion-inline-start:"/Users/binhu/Desktop/bryngs/bryngs_app/src/pages/carrier-trip-ongoing/carrier-trip-ongoing.html"*/'<!--\n  Generated template for the CarrierTripOngoing page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>carrier-trip-ongoing</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <ion-card>\n\n    <ion-card-content>\n      <ion-card-title>\n        Munich -- Berlin\n      </ion-card-title>\n      <p>\n        14:00h 21.Mai\n      </p>\n    </ion-card-content>\n\n    <ion-row no-padding>\n      <ion-col *ngIf = "tripStatus == 1">\n        <button ion-button clear small color="warning" (click)="cancelSelections()" icon-left>\n          <ion-icon name=\'close-circle\'></ion-icon>\n          cancel\n        </button>\n      </ion-col>\n      <ion-col *ngIf = "tripStatus == 1" text-center>\n        <button ion-button clear small color="danger" (click)="confirmSelections()" icon-left>\n          <ion-icon name=\'checkmark-circle\'></ion-icon>\n          confirm\n        </button>\n      </ion-col>\n      <ion-col *ngIf = "tripStatus == 0" text-right>\n        <button ion-button clear small color="danger" (click)="selectStations()" icon-left>\n          <ion-icon name=\'cube\'></ion-icon>\n          Select\n        </button>\n      </ion-col>\n      <ion-col *ngIf = "tripStatus == 2" text-left>\n        <button ion-button clear small color="danger" (click)="reselectStations()" icon-left>\n          <ion-icon name=\'cube\'></ion-icon>\n          Reselect\n        </button>\n      </ion-col>\n      <ion-col *ngIf = "tripStatus == 2" text-right>\n        <button ion-button clear small color="danger" (click)="startTrip()" icon-left>\n          <ion-icon name=\'car\'></ion-icon>\n          Start Trip\n        </button>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n  <ion-list >\n    <ion-item detail-push *ngFor="let item of storages" color="primary" (click) = "selectPackages()">\n      <ion-label>\n        <h1>\n          {{ item.name }}\n        </h1>\n        <p>\n          {{item.address}}\n        </p>\n      </ion-label>\n      <ion-note item-right>\n        3 package\n      </ion-note>\n    </ion-item>\n\n\n  </ion-list>\n\n  <button ion-button block (click)="finishTrip()">Finish Trip</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/binhu/Desktop/bryngs/bryngs_app/src/pages/carrier-trip-ongoing/carrier-trip-ongoing.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_2__providers_courier_service__["CourierService"]]
+        providers: [__WEBPACK_IMPORTED_MODULE_2__providers_courier_service__["a" /* CourierService */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_courier_service__["CourierService"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* LoadingController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_courier_service__["a" /* CourierService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* LoadingController */]])
 ], CarrierTripOngoing);
 
 //# sourceMappingURL=carrier-trip-ongoing.js.map

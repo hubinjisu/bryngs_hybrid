@@ -1,0 +1,82 @@
+<!--
+  Generated template for the CarrierTripOngoing page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>carrier-trip-ongoing</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        Munich -- Berlin
+      </ion-card-title>
+      <p>
+        14:00h 21.Mai
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col *ngIf = "tripStatus == 1">
+        <button ion-button clear small color="warning" (click)="cancelSelections()" icon-left>
+          <ion-icon name='close-circle'></ion-icon>
+          cancel
+        </button>
+      </ion-col>
+      <ion-col *ngIf = "tripStatus == 1" text-center>
+        <button ion-button clear small color="danger" (click)="confirmSelections()" icon-left>
+          <ion-icon name='checkmark-circle'></ion-icon>
+          confirm
+        </button>
+      </ion-col>
+      <ion-col *ngIf = "tripStatus == 0" text-right>
+        <button ion-button clear small color="danger" (click)="selectStations()" icon-left>
+          <ion-icon name='cube'></ion-icon>
+          Select
+        </button>
+      </ion-col>
+      <ion-col *ngIf = "tripStatus == 2" text-left>
+        <button ion-button clear small color="danger" (click)="reselectStations()" icon-left>
+          <ion-icon name='cube'></ion-icon>
+          Reselect
+        </button>
+      </ion-col>
+      <ion-col *ngIf = "tripStatus == 2" text-right>
+        <button ion-button clear small color="danger" (click)="startTrip()" icon-left>
+          <ion-icon name='car'></ion-icon>
+          Start Trip
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-list >
+    <ion-item detail-push *ngFor="let item of storages" color="primary" (click) = "selectPackages()">
+      <ion-label>
+        <h1>
+          {{ item.name }}
+        </h1>
+        <p>
+          {{item.address}}
+        </p>
+      </ion-label>
+      <ion-note item-right>
+        3 package
+      </ion-note>
+    </ion-item>
+
+
+  </ion-list>
+
+  <button ion-button block (click)="finishTrip()">Finish Trip</button>
+
+</ion-content>

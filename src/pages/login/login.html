@@ -1,0 +1,50 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Sign in</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="createAccount()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" novalidate>
+      <ion-list padding>
+
+        <ion-item [class.error]="!usernameCtrl.valid && usernameCtrl.touched">
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" [formControl]="usernameCtrl" clearInput=true></ion-input>
+        </ion-item>
+        <div *ngIf="usernameCtrl.hasError('required') && usernameCtrl.touched" class="error-message">* please input username</div>
+        <div *ngIf="usernameCtrl.hasError('minlength') && usernameCtrl.touched" class="error-message">* the min length is {{nameMinLength}}</div>
+        <div *ngIf="usernameCtrl.hasError('maxlength') && usernameCtrl.touched" class="error-message">* the min length is {{nameMaxLength}}</div>
+        <div *ngIf="usernameCtrl.hasError('pattern') && usernameCtrl.touched" class="error-message">* please input correct email</div>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [formControl]="passwordCtrl" clearInput=true></ion-input>
+        </ion-item>
+        <div *ngIf="passwordCtrl.hasError('required') && passwordCtrl.touched" class="error-message">* please input password</div>
+        <div *ngIf="(passwordCtrl.hasError('minlength')) && passwordCtrl.touched" class="error-message">* the min length is {{passwordMinLength}}</div>
+
+      </ion-list>
+      <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.valid">Sign in</button>
+    </form>
+    <button ion-button clear block >Forgot password?</button>
+  </div>
+</ion-content>
